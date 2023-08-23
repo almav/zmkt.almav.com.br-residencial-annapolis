@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://zmkt.almav.com.br/annapolis/index.html">
+    <meta property="og:title" content="Residencial Annápolis">
+    <meta property="og:site_name" content="Residencial Annápolis">
+    <meta property="og:description" content="Mapa Interativo do Empreendimento - Analândia - SP">
+    <meta property="og:image"
+        content="https://zmkt.maps.almav.com/maps/assets/Annapecb-6ffe-40b5-8ff3-6fdb577de235/thumb01.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="999">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="https://zmkt.maps.almav.com/maps/assets/Annapecb-6ffe-40b5-8ff3-6fdb577de235/favicon.ico" />
+    <title>Residencial Annápolis</title>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+            * element that contains the map. */
+        #map {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let map;
+        function initMap() {
+            map = new almav.maps.Map(document.getElementById("map"), {
+                "settings-id": 1,
+            });
+        }
+            (function (global) {
+
+                if (typeof (global) === "undefined") {
+                    throw new Error("window is undefined");
+                }
+
+                var _hash = "!";
+                var noBackPlease = function () {
+                    global.location.href += "#";
+
+                    // Making sure we have the fruit available for juice (^__^)
+                    global.setTimeout(function () {
+                        global.location.href += "!";
+                    }, 50);
+                };
+
+                global.onhashchange = function () {
+                    if (global.location.hash !== _hash) {
+                        global.location.hash = _hash;
+                    }
+                };
+
+                global.onload = function () {
+                    noBackPlease();
+
+                    // Disables backspace on page except on input fields and textarea..
+                    document.body.onkeydown = function (e) {
+                        var elm = e.target.nodeName.toLowerCase();
+                        if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
+                            e.preventDefault();
+                        }
+                        // Stopping the event bubbling up the DOM tree...
+                        e.stopPropagation();
+                    };
+                }
+            })(window);
+    </script>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+        src="https://zmkt.maps.almav.com/maps/api/js?key=Annapecb-6ffe-40b5-8ff3-6fdb577de235&callback=initMap"
+        defer></script>
+    <script src="https://zmkt.maps.almav.com/maps/assets/Annapecb-6ffe-40b5-8ff3-6fdb577de235/nosleep.min.js"></script>
+    <script>var noSleep = new NoSleep(); noSleep.enable();</script>
+</body>
+
+</html>
