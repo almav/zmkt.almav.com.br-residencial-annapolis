@@ -29,7 +29,7 @@ Incluir API do almav Mapas no seu arquivo HTML:
 <script src="https://zmkt.maps.almav.com/maps/api/js?key=<chave>&callback=<retorno>" defer></script>
 ```
 `<chave>:` **Annapecb-6ffe-40b5-8ff3-6fdb577de235**
-`<retorno>:` Quando você inclui o parâmetro obrigatório callback na URL do script, como no exemplo fornecido, o valor do parâmetro deve ser o nome de uma função (exemplo: **initMap**) que será chamada pelo script do almav Mapas API. Nesse caso, a função de callback é chamada initMap.
+`<retorno>:` Quando você inclui o parâmetro obrigatório callback na URL do script, como no exemplo fornecido, o valor do parâmetro deve ser o nome de uma função que será chamada pelo script do almav Mapas API. Nesse caso, a função de callback é chamada initMap.
 
 > ---
 > IMPORTANTE
